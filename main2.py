@@ -37,7 +37,6 @@ def get_base64_of_bin_file(bin_file):
         return ""  # 返回空字符串作为后备方案
 
 
-
 # 设置页面配置
 st.set_page_config(
     page_title="大经济学家游戏",
