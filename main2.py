@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import random
 import math
 import sys
+import scipy.optimize as opt
 import time
 import plotly.express as px
 import plotly.graph_objects as go
