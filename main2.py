@@ -16,6 +16,14 @@ import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
 import base64
+try:
+    import altair as alt
+    alt.data_transformers.disable_max_rows()
+except:
+    pass
+# 在 main2.py 文件开头添加
+import os
+os.environ['ALTAIR_RENDERER'] = 'png'
 
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
