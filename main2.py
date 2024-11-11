@@ -132,7 +132,7 @@ if shock_type != "无":
 
 # 主要模拟逻辑
 # 修改模拟函数的参数和缓存装饰器
-@st.cache_data
+@st.cache(allow_output_mutation=True, show_spinner=False)
 def run_simulation(n, lab, A, K, w, p_fd, shock_type, shock_start, shock_duration,
                    shock_intensity=1.0, time_length=200,
                    fiscal_policy_1_time=100, fiscal_policy_1=0.0,
