@@ -25,10 +25,17 @@ except:
 import os
 os.environ['ALTAIR_RENDERER'] = 'png'
 
+
+# 修改 get_base64_of_bin_file 函数
 def get_base64_of_bin_file(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
+    try:
+        with open(bin_file, 'rb') as f:
+            data = f.read()
+        return base64.b64encode(data).decode()
+    except Exception as e:
+        st.error(f"Error loading background image")
+        return ""  # 返回空字符串作为后备方案
+
 
 
 # 设置页面配置
